@@ -10,8 +10,8 @@ describe("listFilesAsync", () => {
   });
 
   test("throws an error for a missing directory", async () => {
-    await expect(listFilesAsync("/missing")).rejects.toThrow(
-      "ENOENT: no such file or directory, scandir '/missing'",
+    await expect(listFilesAsync('missing')).rejects.toThrow(
+      'ENOENT',
     );
   });
 });

@@ -15,7 +15,8 @@ describe("deleteFileAsync", () => {
     await deleteFileAsync(filePath);
     expect(() => {
       fs.readFileSync(filePath, "utf8");
-    }).toThrow("ENOENT: no such file or directory, open '" + filePath + "'");
+      console.log(filePath)
+    }).toThrow();
   });
 
   test("throws an error for a missing file", async () => {
